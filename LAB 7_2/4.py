@@ -1,0 +1,15 @@
+from Tkinter import *
+root = Tk()
+Label(root,text='Favourite Color/s').pack()
+v1=IntVar()
+v2=IntVar()
+v3=IntVar()
+v4=IntVar()
+Checkbutton(root,text='Red',variable=v1, onvalue=1).pack()
+Checkbutton(root,text='Green',variable=v2, onvalue=2).pack()
+Checkbutton(root,text='Yellow',variable=v3, onvalue=3).pack()
+Checkbutton(root,text='Purple',variable=v4, onvalue=4).pack()
+def choice():
+    Label(root,text=str(v1.get())+' '+str(v2.get())+' '+str(v3.get())+' '+str(v4.get())).pack()
+Button(root,text='Submit',command=choice).pack()
+root.mainloop()
